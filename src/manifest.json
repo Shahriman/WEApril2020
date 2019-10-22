@@ -1,0 +1,23 @@
+{
+    "name": "send-to-translate",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Adds a context menu option to send selected text to google translate.",
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "menus",
+        "contextMenus",
+        "activeTab"
+    ],
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+    }],
+    "icons": {
+        "48": "translate-icon-48.png"
+    }
+}
